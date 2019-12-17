@@ -230,8 +230,8 @@ void Management::follow_publisher(std::vector <std::string> splited_command)
     msg.contact_id = online_id;
     msg.message = FOLLOWED_MESSAGE;
     publishers[USER_ID]->recieve_message(msg);
-    // publishers[USER_ID]->add_follower(customers[online_id]);
-    // customers[online_id]->follow(publishers[USER_ID]);
+    publishers[USER_ID]->add_follower(customers[online_id]);
+    customers[online_id]->follow(publishers[USER_ID]);
 }
 
 void Management::show_publisher_followers(std::vector <std::string> splited_command)
