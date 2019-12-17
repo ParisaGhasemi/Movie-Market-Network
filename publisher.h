@@ -19,7 +19,7 @@ class Publisher : public User
         void pay_money();
         void print_movies();
         void delete_comment(int movie_id, int comment_id);
-        // void add_follower(Customer* &follower);
+        void add_follower(Customer* &follower);
         void increase_money(int sold_price) { money += sold_price; };
         void show_followers();
         int get_credit() { return money; };
